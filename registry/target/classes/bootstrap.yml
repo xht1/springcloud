@@ -1,0 +1,18 @@
+spring:
+  cloud:
+    config:
+      uri: http://localhost:8100 #Config Server服务地址
+      name: registry #配置文件名称，多个通过逗号分隔
+  application:
+    name: registry
+
+# Eureka相关配置
+eureka:
+  client:
+    register-with-eureka: false #不注册服务
+    fetch-registry: false #不拉去服务清单
+    serviceUrl:
+      defaultZone: http://localhost:${server.port}/eureka/ #多个通过英文逗号分隔
+
+server:
+  port: 8001

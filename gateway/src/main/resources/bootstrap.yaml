@@ -1,0 +1,19 @@
+spring:
+  cloud:
+    config:
+      name: gateway
+      uri: http://localhost:8100
+  application:
+    name: gateway
+
+server:
+  port: 8002
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8001/eureka/
+  instance:
+    lease-renewal-interval-in-seconds: 10
+    lease-expiration-duration-in-seconds: 60
+    prefer-ip-address: true
+    instance-id: http://127.0.0.1:8002

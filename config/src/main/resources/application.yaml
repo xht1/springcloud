@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: springcloud-config
+  profiles:
+    active: native #启用本地配置
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/configs/  #配置文件扫描目录
+server:
+  port: 8100
