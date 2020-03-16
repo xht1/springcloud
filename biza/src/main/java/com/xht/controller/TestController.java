@@ -7,6 +7,6 @@ public class TestController {
 
     public String test(){
 
-        return null;
+        return "test";
     }
 }
